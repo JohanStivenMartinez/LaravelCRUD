@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 //Se hace el importe de UsuarioController
 use App\Http\Controllers\UsuarioController;
+//Import Tasks
+use App\Http\Controllers\TasksController;
 
 
 /*
@@ -42,5 +44,17 @@ Route::get('/home', [UsuarioController::class, 'index'])->name('home');
 Route::prefix(['middleware' => 'auth'],function () {
 
     Route::get('/', [UsuarioController::class, 'index'])->name('home');
+    //Route::get('/Tasks', [TasksController::class, 'index'])->name('home');
 
 });
+
+
+//Parte Tasks
+/*
+* Pruebas Routing
+Route::get('/Tasks', function(){
+    return view ('Tasks.index');
+});
+
+Route::get('/Tasks/createT', [TasksController::class, 'create']);*/
+Route::resource('Tasks', TasksController::class);

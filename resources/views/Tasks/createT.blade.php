@@ -1,0 +1,14 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+
+<form action="{{ url('/Tasks') }}" method="post">
+<!--llave de seguridad laravel-->
+@csrf
+<!--Modos para editar el form-->
+@include('Tasks.formT',['modo'=>'Crear'])
+</form>
+
+</div>
+@endsection

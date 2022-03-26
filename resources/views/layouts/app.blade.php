@@ -38,6 +38,10 @@
                         <a class="nav-link" href="{{ route('Usuario.index') }}">{{ __('Usuario') }}</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Tasks.index') }}">{{ __('Tareas') }}</a>
+                    </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
